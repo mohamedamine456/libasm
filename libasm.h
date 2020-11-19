@@ -6,13 +6,18 @@
 /*   By: mlachheb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 09:08:26 by mlachheb          #+#    #+#             */
-/*   Updated: 2020/11/18 09:29:15 by mlachheb         ###   ########.fr       */
+/*   Updated: 2020/11/19 08:37:05 by mlachheb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t		ft_strlen(const char *);
-int			ft_strcmp(const char *, const char *);
-char		*ft_strcpy(char *, const char *);
-ssize_t		ft_write(int, const void *, size_t);
-ssize_t		ft_read(int, void *, size_t);
-char		*ft_strdup(const char *);
+#ifndef LIBASM_H
+# define LIBASM_H
+
+size_t		ft_strlen(const char *str);
+int			ft_strcmp(const char *s1, const char *s2);
+char		*ft_strcpy(char *dest, const char *src);
+ssize_t		ft_write(int fd, const void *buf, size_t nbyte);
+ssize_t		ft_read(int fd, void *buf, size_t nbyte);
+char		*ft_strdup(const char *str);
+
+#endif

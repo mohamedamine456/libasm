@@ -6,4 +6,9 @@ section		.text
 	_ft_write:
 		mov		rax, SYS_WRITE
 		syscall
+		jc		_error
+		ret
+
+	_error:
+		mov		rax, -1
 		ret
